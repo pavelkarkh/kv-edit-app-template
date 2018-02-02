@@ -1,0 +1,73 @@
+body {
+    background-color: #fafafa;
+    color: #757575;
+    font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    color: #fafafa;
+}
+
+input {
+    border-radius: 2px;
+    border: 1px solid lightskyblue;
+    font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: .5em;
+}
+
+button {
+    border: none;
+    border-radius: 2px;
+    background-color: #fafafa;
+    color: #757575;
+    height: 36px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: rgba(158, 158, 158,.2);
+}
+
+button:active {
+    background-color: rgba(158,158,158,.4);
+}
+
+#app {
+    background: #fafafa;
+    width: 700px;
+    margin: 50px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.header {
+    background-color: #03A9F4;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.kv-item {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-top: 1px solid #d2d2d2;  
+}
+
+#kv-form {
+    border-top: 1px solid #d2d2d2;
+    display: flex;
+    background-color: #fafafa;
+    padding: 10px;
+}
+
+#kv-form input {
+    flex: 1;
+    margin-right: .5rem;
+}
