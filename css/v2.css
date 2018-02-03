@@ -34,14 +34,25 @@ button {
     text-transform: uppercase;
 }
 
+span {
+    cursor: pointer;
+    height: 36px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: .3rem;
+    margin-left: .3rem;
+}
+
 .kv-item .edit-button,
 .kv-item .remove-button {
     background-color: #ffffff;
 }
 
-button:hover, .edit-button:hover,
+button:hover, span:hover,
+.edit-button:hover,
 .remove-button:hover {
     background-color: rgba(158, 158, 158,.2);
+    transition: all .2s;
 }
 
 button:active, .edit-button:active,
@@ -67,6 +78,9 @@ button:active, .edit-button:active,
 
 .kv-item-title {
     margin-right: auto;
+    padding-top: .4rem;
+    padding-bottom: .1rem;
+    padding-left: .3rem;
 }
 
 .kv-item {
@@ -75,6 +89,25 @@ button:active, .edit-button:active,
     border-top: 1px solid #d2d2d2;
     display: flex;
     vertical-align: middle;
+}
+
+.kv-item:hover button,
+.kv-item:hover span {
+    opacity: 1;
+}
+
+.kv-item button,
+.kv-item span {
+    opacity: 0;
+    transition: all .4s;
+}
+
+.kv-item.editing .edit-button {
+    opacity: 1;
+}
+
+.kv-item.editing .remove-button {
+    display: none;
 }
 
 .kv-item .key-input,
@@ -92,8 +125,19 @@ button:active, .edit-button:active,
 
 .kv-item.editing .checkbox,
 .kv-item.editing .kv-item-title,
-.kv-item.editing .remove-button {
+.kv-item.editing span {
     display: none;
+}
+
+.bulk {
+    border-top: 1px solid #d2d2d2;
+    display: flex;
+    background-color: #fafafa;
+    padding: 10px;
+}
+
+.bulk button {
+    margin-left: auto;
 }
 
 #kv-form {
@@ -108,3 +152,9 @@ button:active, .edit-button:active,
     margin-right: .1rem;
     margin-left: 8px;
 }
+
+.menu-toggle:before { 
+    /*content: "≡"; /* символ */
+    content: "\2261"; /* юникод */
+    font: 2em "arial";
+  }
